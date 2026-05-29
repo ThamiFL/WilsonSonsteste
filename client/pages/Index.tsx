@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Shield, AlertCircle, CheckCircle } from 'lucide-react';
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -178,8 +178,35 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section id="video" className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4">
+              Conheça a Wilson Sons
+            </h2>
+            <p className="text-lg text-gray-600">
+              Assista ao vídeo de apresentação do evento e da empresa
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/qaum5s9GaGw?list=PLWyZ9ag5XaAJQlxp3_ZG2eQa4hV3X4v4t"
+                title="Wilson Sons - Apresentação do Evento"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-white">
+      <section id="about" className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4">
@@ -192,7 +219,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
+            <div className="p-8 bg-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center mb-4 font-bold text-xl">
                 🎓
               </div>
@@ -205,7 +232,7 @@ export default function Index() {
             </div>
 
             {/* Card 2 */}
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
+            <div className="p-8 bg-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center mb-4 font-bold text-xl">
                 💼
               </div>
@@ -218,7 +245,7 @@ export default function Index() {
             </div>
 
             {/* Card 3 */}
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
+            <div className="p-8 bg-white rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center mb-4 font-bold text-xl">
                 🌊
               </div>
@@ -233,8 +260,103 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Safety Rules Section */}
+      <section id="safety" className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-4">
+              <Shield className="w-10 h-10 text-blue-600 mr-3" />
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-blue-900">
+                Segurança e Regras
+              </h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Informações importantes sobre vestimenta adequada e equipamentos de proteção individual
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Clothing Section */}
+            <div className="p-8 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-200">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center mr-4">
+                  👔
+                </div>
+                <h3 className="text-2xl font-display font-bold text-blue-900">
+                  Vestimenta Adequada
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Calçado fechado:</strong> Sapatos ou botinas de segurança com solado antiderrapante</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Calças compridas:</strong> Preferencialmente em tecido resistente</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Camiseta ou blusa:</strong> De manga comprida é recomendado</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Evitar:</strong> Saia, shorts, sandálias e roupas soltas</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* PPE Section */}
+            <div className="p-8 bg-gradient-to-br from-orange-50 to-white rounded-2xl border border-orange-200">
+              <div className="flex items-center mb-6">
+                <div className="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center mr-4">
+                  🦺
+                </div>
+                <h3 className="text-2xl font-display font-bold text-blue-900">
+                  Equipamentos de Proteção
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Capacete:</strong> Será fornecido pela Wilson Sons</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Coletes de segurança:</strong> Obrigatórios em áreas portuárias</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Óculos de proteção:</strong> Fornecidos quando necessário</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>Protetor auditivo:</strong> Disponível em áreas de alto ruído</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Important Alert */}
+          <div className="mt-12 max-w-4xl mx-auto p-6 bg-red-50 border-l-4 border-red-500 rounded-lg">
+            <div className="flex items-start">
+              <AlertCircle className="w-6 h-6 text-red-600 mr-4 flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-lg font-bold text-red-900 mb-2">Regras de Segurança Essenciais</h4>
+                <ul className="space-y-2 text-red-800">
+                  <li>• O não cumprimento das regras de segurança pode resultar em exclusão do evento</li>
+                  <li>• Siga todas as orientações dos coordenadores de segurança durante a visita</li>
+                  <li>• Não execute ações não autorizadas em área de risco</li>
+                  <li>• Reporte imediatamente qualquer situação perigosa aos responsáveis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Registration Section */}
-      <section id="registration" className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+      <section id="registration" className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4">
